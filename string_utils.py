@@ -1,25 +1,22 @@
 def split_before_each_uppercase(formula):
     if not formula:
         return []
-
     result = []
-    current_word = formula[0]
-
+    current = formula[0]
     for char in formula[1:]:
         if char.isupper():
-            result.append(current_word)
-            current_word = char
+            result.append(current)
+            current = char
         else:
-            current_word += char
-
-    result.append(current_word)
+            current += char
+    result.append(current)
     return result
 
-
-def split_at_digit(formula):
-    for i, ch in enumerate(formula):
+def split_at_digit(s):
+    for i, ch in enumerate(s):
         if ch.isdigit():
-            return formula[:i], int(formula[i:])
-    return formula, 1
+            return (s[:i], int(s[i:]))
+    return (s, 1)
+
 
 
