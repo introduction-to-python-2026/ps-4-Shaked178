@@ -8,7 +8,7 @@ def split_before_each_uppercase(formula):
             result.append(current_word)
             current_word = char
         else:
-            current += char
+            current_word += char
     result.append(current_word)
     return result
 
