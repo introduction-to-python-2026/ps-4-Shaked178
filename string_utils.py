@@ -12,7 +12,7 @@ def split_before_each_uppercases(formula):
     result.append(current_word)
     return result
 
-def split_at_digit(formula):
+def split_at_first_digit(formula):
       for i, ch in enumerate(formula):
           if ch.isdigit():
               return formula[:i], int(formula[i:])
