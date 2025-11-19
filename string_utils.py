@@ -13,10 +13,10 @@ def split_before_each_uppercase(formula):
     return result
 
 def split_at_digit(formula):
-     for i, ch in enumerate(formula):
-        if ch.isdigit():
-            return formula[:i], int(formula[i:])
-     return formula, 1
+      for i, ch in enumerate(formula):
+          if ch.isdigit():
+              return formula[:i], int(formula[i:])
+      return formula, 1
 
 
 
